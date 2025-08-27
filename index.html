@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maquete AR</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      
+      <!-- Câmera AR -->
+      <a-marker preset="hiro">
+        <!-- Balão de descrição -->
+        <a-entity position="0 0.5 0">
+          <a-plane 
+            color="white" 
+            width="1.5" height="0.7" 
+            position="0 0 0" 
+            rotation="-90 0 0">
+          </a-plane>
+          <a-text 
+            value="Parque Central: Área verde com playground" 
+            align="center" 
+            color="black" 
+            width="2"
+            position="0 0 0.01"
+            rotation="-90 0 0">
+          </a-text>
+        </a-entity>
+      </a-marker>
+
+      <!-- Cena AR -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
